@@ -121,6 +121,8 @@ PEER peerInitialize(PEERCallbacks* callbacks)
 
     printf("PEER INIT 1\n");
 
+    printf("PEER INIT 1b %d\n", __GSIACResult);
+
     // Check if the backend is available.
     /////////////////////////////////////
     if (__GSIACResult != GSIACAvailable)
