@@ -119,14 +119,20 @@ PEER peerInitialize(PEERCallbacks* callbacks)
 
     assert(callbacks);
 
+    printf("PEER INIT 1\n");
+
     // Check if the backend is available.
     /////////////////////////////////////
     if (__GSIACResult != GSIACAvailable)
         return NULL;
 
+    printf("PEER INIT 2\n");
+
     // Init sockets.
     ////////////////
     SocketStartUp();
+
+    printf("PEER INIT 3\n");
 
     // Create an object.
     ////////////////////
@@ -135,6 +141,8 @@ PEER peerInitialize(PEERCallbacks* callbacks)
         return NULL;
     memset(connection, 0, sizeof(piConnection));
     peer = (PEER)connection;
+
+    printf("PEER INIT 3\n");
 
     // Chat.
     ////////
