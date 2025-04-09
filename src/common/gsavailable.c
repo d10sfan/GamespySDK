@@ -144,6 +144,7 @@ static int HandlePacket(char* packet, int len, SOCKADDR_IN* address, int* disabl
 
 GSIACResult GSIAvailableCheckThink(void)
 {
+    printf("GSI HERE???? 1");
     char packet[64];
     SOCKADDR_IN address;
     socklen_t len = sizeof(address);
@@ -194,6 +195,8 @@ GSIACResult GSIAvailableCheckThink(void)
         SendPacket();
         AC.retryCount++;
     }
+
+    printf("GSI HERE???? 2");
 
     return GSIACWaiting;
 }
